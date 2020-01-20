@@ -10,6 +10,15 @@ module.exports = {
 		library: 'react-airbnb-carousel'
 	},
 	devtool: 'source-map',
+	externals: {
+		react: {
+			commonjs: "react",
+			commonjs2: "react",
+			amd: "react",
+			// React dep should be available as window.React, not window.react
+			root: "React"
+		},
+	},
 	module: {
 		rules: [
 			{
