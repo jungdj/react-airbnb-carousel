@@ -1,0 +1,9 @@
+{
+  "name": "react-airbnb-carousel",
+  "version": "1.0.0",
+  "description": "Airbnb like carousel built with React.js",
+  "main": "dist/index.js",
+  "repository": "https://github.com/jungdj/react-airbnb-carousel",
+  "author": "Dongjin Jung <jung_dj@kaist.ac.kr> (https://github.com/jungdj)",
+  "license": "MIT"
+}
