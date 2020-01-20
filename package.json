@@ -22,13 +22,14 @@
   "author": "Dongjin Jung <jung_dj@kaist.ac.kr> (https://github.com/jungdj)",
   "license": "MIT",
   "scripts": {
+    "prepublish":"yarn build",
     "build:clean": "rimraf dist",
-    "build": "$npm_execpath build:clean && webpack",
+    "build": "yarn build:clean && webpack",
     "lint:css": "stylelint './src/**/*.{js,jsx}'"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "$npm_execpath lint-staged"
+      "pre-commit": "yarn lint-staged"
     }
   },
   "lint-staged": {
