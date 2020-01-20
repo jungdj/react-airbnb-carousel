@@ -1,6 +1,6 @@
 {
   "name": "react-airbnb-carousel",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Airbnb like carousel built with React.js",
   "private": false,
   "keywords": [
@@ -22,7 +22,7 @@
   "author": "Dongjin Jung <jung_dj@kaist.ac.kr> (https://github.com/jungdj)",
   "license": "MIT",
   "scripts": {
-    "prepublish":"yarn build",
+    "prepublish": "yarn build",
     "build:clean": "rimraf dist",
     "build": "yarn build:clean && webpack",
     "lint:css": "stylelint './src/**/*.{js,jsx}'"
