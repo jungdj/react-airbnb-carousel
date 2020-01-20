@@ -7,7 +7,19 @@
   "author": "Dongjin Jung <jung_dj@kaist.ac.kr> (https://github.com/jungdj)",
   "license": "MIT",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "lint:css": "stylelint './src/**/*.{js,jsx}'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "$npm_execpath lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "eslint --fix",
+      "stylelint"
+    ]
   },
   "peerDependencies": {
     "react": "^16.12.0"
@@ -16,8 +28,21 @@
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "@babel/preset-react": "^7.8.3",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^4.0.10",
+    "lint-staged": "^10.0.0",
     "react": "^16.12.0",
+    "stylelint": "^12.0.1",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.9.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   }
