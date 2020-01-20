@@ -2,6 +2,7 @@
   "name": "react-airbnb-carousel",
   "version": "0.0.0",
   "description": "Airbnb like carousel built with React.js",
+  "private": false,
   "keywords": [
     "react",
     "image",
