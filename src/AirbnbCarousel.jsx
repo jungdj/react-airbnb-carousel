@@ -15,7 +15,7 @@ const MAX_POSSIBLE_MOBILE_SCREEN_HEIGHT = 960;
 
 const BackgroundImage = styled.div`
   width: 100%;
-  padding-bottom: 75%;
+  padding-bottom: ${(props) => 100 / props.ratio}%;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -52,10 +52,12 @@ const Wrapper = styled.div`
   }
 `;
 
-const AirbnbCarousel = ({ placeholderUrl, imageUrls, initialIndex }) => {
+const AirbnbCarousel = ({
+  placeholderUrl, imageUrls, initialIndex, ratio,
+}) => {
   const slideCount = imageUrls.length || 0;
 
-  const placeholder = <BackgroundImage src={placeholderUrl || ''} />;
+  const placeholder = <BackgroundImage src={placeholderUrl || ''} ratio={ratio} />;
   return (
     <LazyLoad once placeholder={placeholder} offset={MAX_POSSIBLE_MOBILE_SCREEN_HEIGHT}>
       <State initial={{ index: initialIndex, loadedIndexes: [0], hover: false }}>
@@ -89,7 +91,7 @@ const AirbnbCarousel = ({ placeholderUrl, imageUrls, initialIndex }) => {
                           <BubbleLoader loading={loading} color="white" />
                         </Box>
                         )}
-                        <BackgroundImage loading={loading} key={key} src={src} />
+                        <BackgroundImage loading={loading} key={key} src={src} ratio={ratio} />
                       </Flex>
                     )}
                   </ProgressiveImage>
@@ -134,11 +136,13 @@ AirbnbCarousel.propTypes = {
   placeholderUrl: PropTypes.string,
   imageUrls: PropTypes.arrayOf (PropTypes.string).isRequired,
   initialIndex: PropTypes.number,
+  ratio: PropTypes.number,
 };
 
 AirbnbCarousel.defaultProps = {
   placeholderUrl: '',
   initialIndex: 0,
+  ratio: 4 / 3,
 };
 
 export default AirbnbCarousel;
