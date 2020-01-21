@@ -11,6 +11,8 @@
     "react/destructuring-assignment": "warn",
     "react/no-array-index-key": "warn",
     "react/prop-types": "warn",
+    "import/no-named-as-default": "off",
+    "no-nested-ternary": "warn",
     "space-before-function-paren": ["warn", "always"],
     "no-spaced-func": "off",
     "func-call-spacing": ["warn", "always"],

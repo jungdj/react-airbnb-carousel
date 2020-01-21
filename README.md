@@ -14,3 +14,7 @@ yarn add react-airbnb-carousel
 ```
 npm i --save react-airbnb-carousel
 ```
+
+# Acknowledgement
+
+Original work from [Jonas Wiesel](https://github.com/wieseljonas).

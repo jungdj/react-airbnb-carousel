@@ -22,7 +22,7 @@
   "author": "Dongjin Jung <jung_dj@kaist.ac.kr> (https://github.com/jungdj)",
   "license": "MIT",
   "scripts": {
-    "prepublish": "yarn build",
+    "prepublishOnly": "yarn build",
     "build:clean": "rimraf dist",
     "build": "yarn build:clean && webpack",
     "lint:css": "stylelint './src/**/*.{js,jsx}'"
@@ -39,10 +39,12 @@
     ]
   },
   "peerDependencies": {
-    "react": "^16.12.0"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "@babel/preset-react": "^7.8.3",
     "babel-eslint": "^10.0.3",
@@ -63,5 +65,14 @@
     "stylelint-processor-styled-components": "^1.9.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "emotion-icons": "0.0.7",
+    "prop-types": "^15.7.2",
+    "react-lazyload": "2.6.5",
+    "react-powerplug": "1.0.0",
+    "react-swipeable-views": "0.12.16",
+    "react-swipeable-views-utils": "0.12.16",
+    "styled-components": "5.0.0"
   }
 }
