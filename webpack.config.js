@@ -9,10 +9,9 @@ module.exports = {
     libraryTarget: 'umd',
     library: 'react-airbnb-carousel',
   },
-  devtool: 'source-map',
   externals: {
     react: 'react',
-    'react-dom': 'reactDOM',
+    'react-dom': 'react-dom',
     'styled-components': 'styled-components',
   },
   module: {
@@ -24,6 +23,7 @@ module.exports = {
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env', '@babel/react'],
+          plugins: ['babel-plugin-styled-components'],
         },
       },
     ],
