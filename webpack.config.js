@@ -18,6 +18,18 @@ module.exports = {
       // React dep should be available as window.React, not window.react
       root: 'React',
     },
+    'react-dom': {
+      commonjs: 'react-dom',
+      commonjs2: 'react-dom',
+      amd: 'react-dom',
+      root: 'react-dom',
+    },
+    'styled-components': {
+      commonjs: 'styled-components',
+      commonjs2: 'styled-components',
+      amd: 'styled-components',
+      root: 'styled-components',
+    },
   },
   module: {
     rules: [
