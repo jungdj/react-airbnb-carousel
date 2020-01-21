@@ -58,6 +58,7 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "husky": "^4.0.10",
     "lint-staged": "^10.0.0",
+    "react": "^16.12.0",
     "rimraf": "^3.0.0",
     "stylelint": "^12.0.1",
     "stylelint-config-recommended": "^3.0.0",
