@@ -69,9 +69,11 @@
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-lazyload": "2.6.5",
     "react-powerplug": "1.0.0",
     "react-swipeable-views": "0.12.16",
-    "react-swipeable-views-utils": "0.12.16"
+    "react-swipeable-views-utils": "0.12.16",
+    "styled-components": "^5.0.0"
   }
 }
