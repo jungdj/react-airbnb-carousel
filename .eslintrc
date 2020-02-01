@@ -12,6 +12,7 @@
     "react/no-array-index-key": "warn",
     "react/prop-types": "warn",
     "import/no-named-as-default": "off",
+    "import/no-unresolved": ["error", { "ignore": ["^react$", "^styled-components$"] }],
     "no-nested-ternary": "warn",
     "space-before-function-paren": ["warn", "always"],
     "no-spaced-func": "off",

@@ -6,6 +6,7 @@ import { virtualize } from 'react-swipeable-views-utils';
 import { State } from 'react-powerplug';
 import LazyLoad from 'react-lazyload';
 import ProgressiveImage from './ProgressiveImage';
+import Overlay from './Overlay';
 import BubbleLoader from './BubbleLoader';
 import Pagination from './Pagination';
 import ArrowNavigation from './ArrowNavigation';
@@ -37,6 +38,7 @@ const Flex = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 `;
 
 const Box = styled.div`
@@ -53,7 +55,7 @@ const Wrapper = styled.div`
 `;
 
 const AirbnbCarousel = ({
-  placeholderUrl, imageUrls, initialIndex, ratio,
+  placeholderUrl, imageUrls, initialIndex, ratio, overlay,
 }) => {
   const slideCount = imageUrls.length || 0;
 
@@ -92,13 +94,13 @@ const AirbnbCarousel = ({
                         </Box>
                         )}
                         <BackgroundImage loading={loading} key={key} src={src} ratio={ratio} />
+                        {overlay && <Overlay />}
                       </Flex>
                     )}
                   </ProgressiveImage>
                 );
               }}
             />
-
             {imageUrls.length > 1 && state.hover && (
             <ArrowNavigation
               slideCount={slideCount}
@@ -137,12 +139,14 @@ AirbnbCarousel.propTypes = {
   imageUrls: PropTypes.arrayOf (PropTypes.string).isRequired,
   initialIndex: PropTypes.number,
   ratio: PropTypes.number,
+  overlay: PropTypes.bool,
 };
 
 AirbnbCarousel.defaultProps = {
   placeholderUrl: '',
   initialIndex: 0,
   ratio: 4 / 3,
+  overlay: false,
 };
 
 export default AirbnbCarousel;
