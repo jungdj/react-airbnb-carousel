@@ -1,6 +1,4 @@
-# Note
-
-This project is maintained by [@jungdj](https://github.com/jungdj), please reach out on any issues or help.
+# [react-airbnb-carousel](https://www.npmjs.com/package/react-airbnb-carousel) &middot; [![npm version](https://badge.fury.io/js/react-airbnb-carousel.svg)](https://badge.fury.io/js/react-airbnb-carousel)
 
 ----
 # Install
@@ -15,6 +13,11 @@ yarn add react-airbnb-carousel
 npm i --save react-airbnb-carousel
 ```
 
-# Acknowledgement
+## Preview
+
+![preview](docs/Preview.gif)
+*Usage in [ZABO](https://zabo.sparcs.org) detail page*
+
+## Acknowledgement
 
 Original work from [Jonas Wiesel](https://github.com/wieseljonas).
